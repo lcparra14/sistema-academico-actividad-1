@@ -11,3 +11,6 @@ class asignaturaController():
 
     def get_asignaturas(self):
         return self.asignaturas.copy()
+    
+    def buscar_asignatura_por_nombre(self, nombre):
+        return [asig for asig in self.asignaturas if asig.get_nombre() == nombre]
